@@ -1,4 +1,5 @@
-// 3-5강 참고
+// 3-5강 참고.
+
 const h1 = document.querySelector("div.hello:first-child h1");
 
 function handleTitleClick() {
