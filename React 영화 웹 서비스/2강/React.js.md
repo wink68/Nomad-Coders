@@ -3,6 +3,8 @@
 2. React JS는 JS를 통해 element를 생성하고, 그걸 HTML로 옮김
    = React JS가 화면에 보여질 HTML을 컨트롤 할 수 있다
 
+<br>
+
 ```js
 <!DOCTYPE html>
 <html>
@@ -16,13 +18,14 @@
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script>
     const root = document.getElementById("root");
-    /* 태그 생성 */
+    // 태그 생성
     const span = React.createElement(
       "span",                       /* (생성할 태그, 프로퍼티, 내용) */
       { id: "sexy-span", style: { color: "red" } },
       "Hello, I'm a span"
     );
-    /* 렌더링: 사용자에게 보여줌 */
+    
+    // 렌더링: 사용자에게 보여줌
     ReactDOM.render(span, root)     /* (생성할 태그, 생성 장소) */
   </script>
 </html>
