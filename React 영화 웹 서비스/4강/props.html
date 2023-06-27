@@ -12,9 +12,10 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
   <script type="text/babel">
-    function Btn(props) {
+    function Btn({ text, changeValue }) {
       return (
         <button
+          onClick={changeValue}
           style={{
             backgroundColor: "tomato",
             color: "white",
@@ -22,13 +23,16 @@
             border: 0,
             borderRadius: 10,
           }}
-        >{props.text}</button>
+        >{text}</button>
       );
     }
     function App() {
+      const [value, setValue] = React.useState("Save Changes");
+      const changeValue = () => setValue("Revert Changes");
+
       return (
         <div>
-          <Btn text="Save Changes" />
+          <Btn text={value} changeValue={changeValue} />
           <Btn text="Continue" />
         </div>
       );
